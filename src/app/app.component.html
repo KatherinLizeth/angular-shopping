@@ -1,8 +1,39 @@
-
 <h2>
   Data Binding uso de ngModel
 </h2>
 
-<input type="text" [(ngModel)] ="title">
+<input type="text" [(ngModel)]="title">
 <h3>{{ title }}</h3>
 
+<hr>
+
+<h2>
+  Uso de Directiva ngIf
+</h2>
+
+<p *ngIf="title === 'contenido'">
+  contenido condicional....
+</p>
+
+<hr>
+
+<h2>Directiva ngFor</h2>
+<ul>
+  <li *ngFor="let usuario of usuarios">
+    {{ usuario }}
+  </li>
+</ul>
+
+<h2>Directiva ngFor con Indice</h2>
+<ul>
+  <li *ngFor="let usuario of usuarios; index as i">
+    {{ usuario }} {{i}}
+  </li>
+</ul>
+
+<hr>
+<h2>Agregar un elemento a una lista</h2>
+<input type="text" [(ngModel)]="usuario">
+<button (click)='addItem(usuario)'> Agregar item</button>
+
+<button (click) = 'deleteItem()'> Borrar ultimo</button>

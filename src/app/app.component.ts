@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title;
+
+  usuarios = ['Alejandro', 'Edna', 'Santiago', 'Maria']
+
+  usuario;
+  addItem(item){
+    this.usuarios.push(item)
+  }
+
+  deleteItem(){
+    this.usuarios.pop()
+  }
+
+
 }
